@@ -10,7 +10,7 @@ The **TDS Virtual Teaching Assistant (Virtual TA)** is an AI-driven question-ans
   The system combines indexed course content and forum posts stored in an SQLite database, with pre-computed sentence embeddings for efficient semantic search.
 
 - **Semantic Search with Embeddings**  
-  Incoming questions are converted into embeddings using a SentenceTransformer model (`BAAI/bge-base-en-v1.5`). The system retrieves the most relevant content chunks from both course and forum data by computing cosine similarity against stored embeddings, filtering based on a configurable similarity threshold.
+  Incoming questions are converted into embeddings using a SentenceTransformer model (`text-embedding-3-small`). The system retrieves the most relevant content chunks from both course and forum data by computing cosine similarity against stored embeddings, filtering based on a configurable similarity threshold.
 
 - **Image Text Extraction (OCR)**  
   The API supports optional image inputs encoded in base64. It extracts text from these images using Tesseract OCR (`pytesseract`), appending any extracted text to the original question to improve context and answer accuracy.
