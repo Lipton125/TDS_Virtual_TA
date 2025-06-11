@@ -70,11 +70,8 @@ The knowledge base combines two primary data sources to power the Virtual TA:
 
 Two Python API scripts provide endpoints for querying the Virtual TA:
 
-- `virtual_ta_api_test.py`  
-  Provides a REST API for question answering based on the knowledge base.
-
-- `virtual_ta_api_test_img.py`  
-  Extended API with support for image attachments (e.g., base64-encoded screenshots) in questions.
+- `virtual_ta_api.py`  
+  Provides a Fast API for question answering based on the knowledge base. Supports image attachments (e.g., base64-encoded screenshots) in questions.
 
 ---
 
@@ -89,8 +86,8 @@ Two Python API scripts provide endpoints for querying the Virtual TA:
 ## How to Use
 
 1. **Run the scraping scripts** to keep the knowledge base up-to-date.
-2. **Build the knowledge base** using `base_creation_test.py`.
-3. **Deploy the API** (`virtual_ta_api_test.py` or `virtual_ta_api_test_img.py`).
+2. **Build the knowledge base** using `base_creation.py`.
+3. **Deploy the API** (`virtual_ta_api.py`).
 4. **Send POST requests** to the API endpoint with student questions and optional images to receive answers.
 
 ---
