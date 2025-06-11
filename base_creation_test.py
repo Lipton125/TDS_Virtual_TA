@@ -20,7 +20,7 @@ CHUNK_SIZE = 750
 CHUNK_OVERLAP = 70
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("OPENAI_KEY"))
 
 def chunk_text(text, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     chunks, start = [], 0
