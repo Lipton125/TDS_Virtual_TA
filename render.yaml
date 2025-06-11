@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: tds-virtual-ta
+    env: docker
+    plan: free
+    region: singapore
+    branch: main
+    envVars:
+      - key: API_KEY
+        value: eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjIwMDcwMDJAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.AperJaXxOltak8MvbSm9DTNqhZ5Sbal_hou7Ljpo73A
+      - key: OPENAI_BASE_URL
+        value: https://aipipe.org/openai/v1
+
