@@ -63,6 +63,8 @@ The knowledge base combines two primary data sources to power the Virtual TA:
 
 - `base_creation_test.py`  
   Processes and consolidates the scraped data into a structured knowledge base ready for querying.
+- `updatelink.py`
+  Processes the discourses url and replaces them with working urls.
 
 ---
 
@@ -79,7 +81,7 @@ Two Python API scripts provide endpoints for querying the Virtual TA:
 
 - **Python Version:** 3.10.17
 - **API Endpoint:**  
-  [https://tds-virtual-ta.serveo.net/query](https://tds-virtual-ta.serveo.net/query)
+  [https://fit-snake-strangely.ngrok-free.app/query](https://fit-snake-strangely.ngrok-free.app/query)
 
 ---
 
@@ -87,8 +89,9 @@ Two Python API scripts provide endpoints for querying the Virtual TA:
 
 1. **Run the scraping scripts** to keep the knowledge base up-to-date.
 2. **Build the knowledge base** using `base_creation.py`.
-3. **Deploy the API** (`virtual_ta_api.py`).
-4. **Send POST requests** to the API endpoint with student questions and optional images to receive answers.
+3. **Update the urls** using `updatelinks.py`.
+4. **Deploy the API** (`virtual_ta_api.py`).
+5. **Send POST requests** to the API endpoint with student questions and optional images to receive answers.
 
 ---
 
@@ -97,6 +100,6 @@ Two Python API scripts provide endpoints for querying the Virtual TA:
 You can query the Virtual TA API using a `POST` request with JSON data. The request can include a `question` string and optionally an image encoded in base64.
 
 ```bash
-curl "https://tds-virtual-ta.serveo.net/query" \
+curl "https://fit-snake-strangely.ngrok-free.app/query" \
   -H "Content-Type: application/json" \
   -d "{\"question\": \"Enter your question here.\", \"image\": \"$(base64 -w0 /img_path/img [Optional].)\"}"
