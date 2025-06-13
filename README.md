@@ -63,8 +63,9 @@ The knowledge base combines two primary data sources to power the Virtual TA:
 
 - `base_creation_test.py`  
   Processes and consolidates the scraped data into a structured knowledge base ready for querying.
-- `updatelink.py`
-  Processes the discourses url and replaces them with working urls.
+
+- `updatelink.py`  
+  Processes the Discourse URLs and replaces them with working URLs.
 
 ---
 
